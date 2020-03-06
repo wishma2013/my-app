@@ -52,8 +52,7 @@ class Login extends Component {
         //go to home page [F_39] # 2020-02-25 08:56:58
         //因为是post，需要调用route跳转。 [F_42] # 2020-02-25 10:07:39
         var email = document.querySelector("input[name='email']").value
-        alert(1)
-        return email===1;
+        return true;
     }
 
     handleSubmit = function() {
@@ -65,7 +64,7 @@ class Login extends Component {
         return <section className="login-body">
                 <h1>欢迎回家！{this.state.mystate}</h1>
                 <div className="w3ls-login box">
-                    <img src={process.env.PUBLIC_URL+"/logo192.png"} alt="logo_img" />
+                    <img src={process.env.PUBLIC_URL+"/logo192.png"} alt="logo_img" className="App-logo" />
                     <form method="post" onSubmit={this.onSubmitForm}>
                         <div className="agile-field-txt">
                             <input type="email" name="email" placeholder="Your email" required="" />
